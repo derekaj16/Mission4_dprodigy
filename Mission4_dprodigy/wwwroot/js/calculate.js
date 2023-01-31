@@ -13,8 +13,15 @@ $(function () {
         let final = parseFloat(($('#final').val() != '') ? $('#final').val() : 0.0);
         let intex = parseFloat(($('#intex').val() != '') ? $('#intex').val() : 0.0);
 
-        grade = assignments * 0.50 + project * 0.1 + quizzes * 0.1 + midterm * 0.1 + final * 0.1 + intex * 0.1;
-        console.log(grade);
+        // Calculate grade
+        grade = assignments * 0.50
+                + project * 0.1
+                + quizzes * 0.1
+                + midterm * 0.1
+                + final * 0.1
+                + intex * 0.1;
+
+        // Determine letter grade based on grade
         switch (true) {
             case grade >= 94.0:
                 letterGrade = 'A';
@@ -52,6 +59,8 @@ $(function () {
             default:
                 letterGrade = 'E';
         }
+
+        // Print grade to screen
         $('#grade').html(letterGrade);
         
     });
