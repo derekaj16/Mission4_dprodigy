@@ -7,6 +7,8 @@ let v = document.getElementById('volcano');
 window.addEventListener('scroll', function () {
 
     let value = window.scrollY;
+    let descriptionSections = document.getElementsByClassName('content-display');
+    console.log(descriptionSections);
 
     gh1.style.left = -100 - value + 'px';
     gh2.style.right = -200 - value + 'px';
@@ -41,14 +43,10 @@ window.addEventListener('scroll', function () {
         $('.final').fadeIn("slow");
         if (value >= 2000) {
             $('#volcano').fadeOut("slow");
-            $('#extra-text').fadeIn("slow");
+            descriptionSections.fadeIn("slow");
         } else {
             $('#volcano').fadeIn("fast");
-            $('#extra-text').fadeOut("fast");
+            descriptionSections.fadeOut("fast");
         }
     } else {}
 });
-
-document.getElementById('calculate').addEventListener('click', function () {
-    alert('hello world');
-})

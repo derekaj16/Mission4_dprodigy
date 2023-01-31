@@ -148,10 +148,10 @@ header {
     margin-right: 150px;
 }
 
-    .img img {
-        width: 400px;
-        object-fit: cover;
-    }
+.img img {
+    width: 400px;
+    object-fit: cover;
+}
 
 .info-title {
     font-size: 40px;
@@ -175,7 +175,7 @@ header {
 }
 
 .extra {
-    height: 350vh;
+    height: 500vh;
 }
 
     .extra h1 {
@@ -295,8 +295,9 @@ header {
 form {
     max-width: 400px;
     padding: 25px;
-    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    box-shadow: 0 0 15px rgba(12, 58, 31, 0.3);
     border-radius: 10px;
+    margin-top: 50px;
 }
 form input {
     width: 100%;
@@ -307,4 +308,37 @@ form input {
 }
 form input:focus {
     outline: 2px solid rgb(45, 191, 216);
+}
+form button {
+    background-color: Highlight;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    transition: .25s;
+    font-size: 16px;
+    margin: 15px 0;
+    width: 100%;
+}
+form button:hover {
+    background-color: deepskyblue;
+}
+.content-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.description {
+    margin-right: 100px;
+    max-width: 400px;
+
+}
+.content-display {
+    display: none;
 }
