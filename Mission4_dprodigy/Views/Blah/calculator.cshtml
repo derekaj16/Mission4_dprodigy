@@ -5,29 +5,33 @@
     ViewData["title"] = "Grade Calculator";
 }
 
+@model CalculatorModel;
+
 <div class="form-container">
 
-    <form action="calculateGrade()">
+    <form method="post">
         <label for="assignments">Assignments</label>
-        <input type="number" step="0.01" id="assignments" />
+        <input type="number" step="0.01" id="assignments" asp-for="Assignment"/>
 
         <label for="group_project">Group Project</label>
-        <input type="number" step="0.01" id="group_project" />
+        <input type="number" step="0.01" id="group_project" asp-for="Project"/>
 
         <label for="quizzes">Quizzes</label>
-        <input type="number" step="0.01" id="quizzes" />
+        <input type="number" step="0.01" id="quizzes" asp-for="Quiz"/>
 
         <label for="midterm">Midterm Exam</label>
-        <input type="number" step="0.01" id="midterm" />
+        <input type="number" step="0.01" id="midterm" asp-for="Midterm"/>
 
         <label for="final">Final Exam</label>
-        <input type="number" step="0.01" id="final" />
+        <input type="number" step="0.01" id="final" asp-for="Final"/>
 
         <label for="intex">INTEX</label>
-        <input type="number" step="0.01" id="intex" />
+        <input type="number" step="0.01" id="intex" asp-for="Intex"/>
 
-        <button type="button" id="calculate">Calculate Grade</button>
+        <button type="submit" id="calculate">Calculate Grade</button>
         <h3 class="text-center">Grade: <span id="grade">--</span></h3>
+
+        <div asp-validation-summary="All"></div>
     </form>
 
 
